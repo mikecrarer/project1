@@ -1,6 +1,6 @@
 Project Title
 
-One Paragraph of project description goes here
+This is the 1st project from stream 1 code institute. It is to create a static website with certain features and some non trivial JS.
 
 Getting Started
 

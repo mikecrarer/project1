@@ -1,0 +1,50 @@
+
+#Logo{
+  position: absolute;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+}
+
+#TopSection{
+  background-color: blue;
+  background-image: url("img/rusty-car-header.png");
+  background-color: gray;
+  background-position: center;
+
+}
+
+#Navigation{
+  background-color: lightgray;
+  }
+
+#Header{
+  height: 350px;
+  }
+
+#Introduction{
+  background-color: white;
+  }
+
+#MainPage{
+  background-color: lightgray;
+  text-align: center;
+  }
+
+.col-md-4{
+  border: 1px dotted gray;
+  background-color: transparent;
+}
+
+.RustyBlock{
+  height: 250px;
+  background-color: white;
+  margin-bottom: 15px;
+}
+
+#Footer{
+  background-color: beige;
+}

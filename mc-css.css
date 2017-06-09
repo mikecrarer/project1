@@ -1,29 +1,78 @@
+body{
+  background-color: brown;
+  background-image: url("img/rust-background.jpg");
+  background-repeat: repeat;
+}
+
 
 #Logo{
   position: absolute;
-  position: absolute;
+  position: fixed;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
-  z-index: 10000;
-}
+  z-index: 1;
+  }
+
 
 #TopSection{
   background-color: blue;
   background-image: url("img/rusty-car-header.png");
+  background-size: cover;
   background-color: gray;
   background-position: center;
-
-}
+  }
 
 #Navigation{
   background-color: lightgray;
+  text-align: center;
+  }
+
+  #Navigation a{
+    color: white;
+    width: 120px;
+    background-color: rgba(220,220,220,0.7);
+    z-index: 10000000;
+  }
+
+  #Navigation a:hover{
+    color: brown;
+    width: 120px;
+    background-color: rgba(220,220,220,0.9);
+    z-index: 10000000;
+  }
+
+
+/* Makes the standard nav background transparent so car image shows through*/
+.navbar-custom {
+    background-color: transparent;
+    border: none;
+}
+
+
+/* This is to move the Right Nav in by 20px to Match the default for the Left Nav */
+li #RightLink {
+  margin-right: 20px;
+}
+
+/* Gets rid of the line under the collapse menu - it went straight throug the imnage otherwise */
+#bs-example-navbar-collapse-1{
+  border: none;
   }
 
 #Header{
   height: 350px;
   }
+
+/*Modified to make sure the hamburger shows above the logo and that the dropdown menu appears at the top on the left */
+.navbar-toggle{
+  position: absolute;
+  position: fixed;
+  right: 0;
+  z-index: 100000;
+}
+
 
 #Introduction{
   background-color: white;
@@ -35,16 +84,61 @@
   }
 
 .col-md-4{
+  float: left;
   border: 1px dotted gray;
   background-color: transparent;
+  /* height: 500px; */
+  max-height:100%;
 }
 
+/* From getbopotstrap.com to make rows all same height. ( IE9 and Abive ) */
+/*
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+*/
+
 .RustyBlock{
-  height: 250px;
+  max-height: 95%;
   background-color: white;
   margin-bottom: 15px;
 }
 
 #Footer{
   background-color: beige;
+}
+
+.body{
+  background-color: red;
+}
+
+
+
+/* ANIMATIONS */
+
+/* The animation code */
+@keyframes RustyCarAnimation{
+    0%   {visibility: visible; background-color:transparent; left:-1000px; top:200px;}
+    12%  {background-color:transparent; left:80px; top:200px;}
+    25%  {background-color:transparent; left:88px; top:200px;}
+    50%  {background-color:transparent; left:105px; top:200px;}
+    95%  {background-image: url("img/rustycar-left.gif"); background-color:transparent; left:800px; top:200px;}
+    99% {background-image: url("img/boom.gif"); background-color:transparent; left:1200px; top:200px;}
+    100% {background-image: url("img/boom.gif"); background-color:transparent; left:1500px; top:200px;}
+}
+
+/* The element to apply the animation to */
+  #LeftCar {
+    animation-name: RustyCarAnimation;
+    animation-duration: 60s;
+    visibility: hidden;
+    width: 222px;
+    height: 124px;
+    position: relative;
+    background-color: transparent;
+
+    background-image: url("img/rustycar-left.gif")
 }
